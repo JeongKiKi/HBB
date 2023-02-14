@@ -42,6 +42,7 @@
         background-size: cover;
         position: relative;
         cursor: pointer; 
+        opacity: 1;
       }
 
       /* 하단 영역 스타일링 */
@@ -106,7 +107,7 @@
         transform: translate(-270%);
       }
       .showText{
-         opacity: 0;
+         opacity: 1;
       }
       .hideText{
         opacity: 1;
@@ -148,8 +149,19 @@
           // 클릭 기능
           // 1. 선택된 사진의 숫자를 가진 텍스트를 alert 형태로 출력해줌
           function alertText(number) {
-            alert(`${number}번째 추억이에요! 눌러주셔서 감사합니다 :)`);
+            
+            if (number === 1) {
+              alert(` 지성이랑 벚꽃 :)`);
+            } else if (number === 2) {
+              alert(`부산 롯데월드 :)`);
+            } else if (number === 3){
+              alert(` 익선동 데이트 :)`);
+            }
+            else {
+              alert(`잠실 롯데월드 :)`);
+            }
           }
+          
     </script>
   </head>
   <body>
